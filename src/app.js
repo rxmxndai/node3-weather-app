@@ -26,7 +26,7 @@ hbs.registerPartials(partialsPath)
 
 
 // use of path for static pages (static directory)
-app.use(express.static(publicDirectoryPath))
+// app.use(express.static(publicDirectoryPath))
 
 
 // ----------------------------------------------------GET REQUESTS---------------------------------------------------------------------------------- //
@@ -37,7 +37,6 @@ app.get("", (req, res) => {
         name: "Roman Karki"
     })
 })
-
 
 app.get("/about", (req, res) => {
     res.render("about", {
