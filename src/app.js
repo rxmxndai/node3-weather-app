@@ -6,15 +6,11 @@ const forecast = require("./utils/forecast")
 
 
 // DIR NAME AND LOCATION (path)
-console.log(__dirname)
 // console.log(path.join(__dirname, "../public"))
-
 
 // store express library in a variable
 const app = express()
 const port = process.env.PORT || 3000
-
-
 
 // defines path for Express config
 const publicDirectoryPath = path.join(__dirname, "../public")
@@ -28,7 +24,7 @@ hbs.registerPartials(partialsPath)
 
 
 // use of path for static pages (static directory)
-// app.use(express.static(publicDirectoryPath))
+app.use(express.static(publicDirectoryPath))
 
 
 // ----------------------------------------------------GET REQUESTS---------------------------------------------------------------------------------- //
